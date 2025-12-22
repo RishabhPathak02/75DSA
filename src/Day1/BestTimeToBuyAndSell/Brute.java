@@ -1,0 +1,13 @@
+package Day1.BestTimeToBuyAndSell;
+
+public class Brute {
+    public static int buyAndSell(int[] prices) {
+        int maxProfit = Integer.MIN_VALUE;
+        for (int i = 0 ; i<prices.length ; i++){
+            for(int j = i+1 ; j<prices.length ; j++){
+                maxProfit = Math.max(maxProfit , prices[j]-prices[i]);
+            }
+        }
+        return maxProfit;
+    }
+}
