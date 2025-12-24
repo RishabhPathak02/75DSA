@@ -1,0 +1,12 @@
+package Day4.MergeSorted;
+
+import java.util.Arrays;
+
+public class brute {
+    public static void mergeArray(int[] nums1,int m, int[] nums2,int n) {
+        for(int i = 0 ; i< nums2.length ; i++){
+            nums1[m+i]=nums2[i];
+        }
+        Arrays.sort(nums1);
+    }
+}
